@@ -11,4 +11,5 @@ Solidity tutorial:
 Epidemiology tutorial:
 
 Trello board:
+https://trello.com/b/ZZ24cgWw/master-projects
 
