@@ -1,8 +1,6 @@
 import csv
 
-path = "Datasets/Mosquito/Zika/cdc_zika.csv";
-br = "\n ---------- \n"
-
+path = "Datasets/Mosquito/Zika/cdc_zika.csv"
 br = "\n ---------- \n"
 
 with open(path) as csvFile:
@@ -75,4 +73,3 @@ with open(path) as csvFile:
         else:
             miscType += caseType[i]
     print("Other data type : " + str(miscType))
-
