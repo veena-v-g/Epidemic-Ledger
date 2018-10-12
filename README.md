@@ -9,6 +9,8 @@ Datasets:
 Python tutorial:
 http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/
 
+We are using easy-blockchain for the tutorial phase. 
+
 Epidemiology tutorial:
 http://wiki.deductivethinking.com/wiki/Python_Programs_for_Modelling_Infectious_Diseases_book
 
