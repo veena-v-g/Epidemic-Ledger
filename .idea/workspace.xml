@@ -22,7 +22,7 @@
         <counts>
           <entry key="csv" value="4" />
           <entry key="md" value="1" />
-          <entry key="py" value="1" />
+          <entry key="py" value="2" />
           <entry key="tif" value="1" />
         </counts>
       </usages-collector>
@@ -31,7 +31,7 @@
           <entry key="Image" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="1" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -221,6 +221,9 @@
           <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PyReference/Collections.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Datasets/Mosquito/Zika/cdc_zika.csv">
       <provider selected="true" editor-type-id="text-editor">

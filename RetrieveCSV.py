@@ -3,6 +3,8 @@ import csv
 path = "Datasets/Mosquito/Zika/cdc_zika.csv";
 br = "\n ---------- \n"
 
+br = "\n ---------- \n"
+
 with open(path) as csvFile:
     reader = csv.reader(csvFile, delimiter=",")
     lines = 0
@@ -10,6 +12,8 @@ with open(path) as csvFile:
     caseType = {}
     region = {}
     date = {}
+
+    }
 
     for row in reader:
         dataField = row[3]
