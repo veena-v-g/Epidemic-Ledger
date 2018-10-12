@@ -12,9 +12,7 @@ with open(path) as csvFile:
     caseType = {}
     region = {}
     date = {}
-
-    }
-
+    
     for row in reader:
         dataField = row[3]
         cases = row[7]
