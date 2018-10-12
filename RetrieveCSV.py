@@ -19,7 +19,7 @@ with open(path) as csvFile:
 
         if lines == 0:
             print(f"Column names are {', '.join}")
-        elif dataField == "zika_confirmed_laboratory" or dataField == "zika_confirmed_clinic":
+        elif dataField == "zika_confirmed_clinic":
             if cases != "NA" and int(cases) > 0:
                 # print(f"Incident: {cases} confirmed case(s) in the {row[2]} of {location} on {time}")
                 confirmed += int(cases)
@@ -43,8 +43,7 @@ with open(path) as csvFile:
 
     print(br)
     print("Total line count: " + str(lines))
-    print("Relevant data sets parsed: "
-          + str(caseType["zika_confirmed_laboratory"] + caseType["zika_confirmed_clinic"]))
+    print("Relevant data sets parsed: " + str(caseType["zika_confirmed_clinic"]))
     print("Confirmed cases: " + str(confirmed))
 
     print(br)
