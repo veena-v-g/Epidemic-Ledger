@@ -73,3 +73,4 @@ with open(path) as csvFile:
         else:
             miscType += caseType[i]
     print("Other data type : " + str(miscType))
+
