@@ -6,7 +6,7 @@ https://medium.com/@vghorakavi/using-blockchain-to-track-infectious-diseases-ad2
 
 Datasets:
 
-Solidity tutorial:
+Python tutorial:
 
 Epidemiology tutorial:
 
