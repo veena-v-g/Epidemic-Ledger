@@ -13,4 +13,4 @@ Epidemiology tutorial:
 http://wiki.deductivethinking.com/wiki/Python_Programs_for_Modelling_Infectious_Diseases_book
 
 Trello board:
-https://trello.com/b/ZZ24cgWw/master-projects
+https://trello.com/b/5BlQBLxY/hackseq
