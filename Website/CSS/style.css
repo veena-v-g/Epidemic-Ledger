@@ -1,0 +1,8 @@
+body {
+	background-color: lightgray;
+	max-width: 100vw;
+}
+
+form input {
+    width: 200px;
+}
