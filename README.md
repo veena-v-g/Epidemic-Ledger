@@ -13,39 +13,46 @@ Applying blockchain methodologies for tracking infectious diseases. It accepts
 
 ### Language
 
-python 3.6
+* Python 3.6
+* Java 1.8
+* R
 
 ### Libraries
 
-easy-blockchain
+* Java
+  * Corda 3.2
+* Python
+  * numpy 1.15
+  * virtualenv
+* R
+  * SF
+  * MapView
+  * DPLYR
+  * ggmap
+  * XLXS
+  * TidyR
+  * DKAHLE/ggmap
+  
 
 ## Installation
 
-Just clone the GitHub repo:
+1. Open a terminal
+1. Type `git clone https://github.com/vghorakavi/InfectiousBlockchain`
 
-```
-git clone https://github.com/vghorakavi/InfectiousBlockchain
-```
+## Input
 
-## I/O
+* Disease transmission case data
+  * Location
+  * Health Status
 
-<!-- TODO: more explicit detail for input/output -->
+## Output
 
-### Input
-
-- Disease transmission case data
-
-### Output
-
-- Blockchain of infectious disease transmissions
-
-## Usage
-
-<!-- TODO: -->
+* Blockchain of infectious disease transmissions
+* A Map of all the disease cases
 
 ## Datasets
 
-<!-- TODO: -->
+[Zika Data](https://github.com/vghorakavi/InfectiousBlockchain/blob/master/Datasets/Mosquito/Zika/cdc_zika.csv)
 
 ## Articles
 
