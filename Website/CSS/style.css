@@ -41,3 +41,8 @@ iframe {
 	border-radius: 5px;
 }
 
+.poster {
+	position: relative;
+	width: 100%;
+	height: auto; 
+}
