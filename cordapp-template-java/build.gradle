@@ -138,7 +138,8 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
     }
     node {
-        name "O=TestNode,L=Test,C=US"
+        name "O=InfectiousDiseaseNode,L=New York,C=US"
+        println ("File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika");
         p2pPort 10014
         rpcSettings {
             address("localhost:10009")
@@ -152,7 +153,87 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         ]
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
     }
-    println "File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika"
+    node {
+        name "O=Case 1,L=New York,C=US"
+        println ("File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika");
+        p2pPort 10018
+        rpcSettings {
+            address("localhost:10009")
+            adminAddress("localhost:10049")
+        }
+        webPort 10020
+        cordapps = [
+                "$project.group:cordapp-contracts-states:$project.version",
+                "$project.group:cordapp:$project.version",
+                "$corda_release_group:corda-finance:$corda_release_version"
+        ]
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+    }
+    node {
+        name "O=Case 2,L=New York,C=US"
+        println ("File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika");
+        p2pPort 10022
+        rpcSettings {
+            address("localhost:10009")
+            adminAddress("localhost:10049")
+        }
+        webPort 10024
+        cordapps = [
+                "$project.group:cordapp-contracts-states:$project.version",
+                "$project.group:cordapp:$project.version",
+                "$corda_release_group:corda-finance:$corda_release_version"
+        ]
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+    }
+    node {
+        name "O=Case 3,L=New York,C=US"
+        println ("File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika");
+        p2pPort 10026
+        rpcSettings {
+            address("localhost:10009")
+            adminAddress("localhost:10049")
+        }
+        webPort 10028
+        cordapps = [
+                "$project.group:cordapp-contracts-states:$project.version",
+                "$project.group:cordapp:$project.version",
+                "$corda_release_group:corda-finance:$corda_release_version"
+        ]
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+    }
+    node {
+        name "O=Case 4,L=New York,C=US"
+        println ("File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika");
+        p2pPort 10030
+        rpcSettings {
+            address("localhost:10009")
+            adminAddress("localhost:10049")
+        }
+        webPort 10032
+        cordapps = [
+                "$project.group:cordapp-contracts-states:$project.version",
+                "$project.group:cordapp:$project.version",
+                "$corda_release_group:corda-finance:$corda_release_version"
+        ]
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+    }
+    node {
+        name "O=Case 5,L=New York,C=US"
+        println ("File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika");
+        p2pPort 10034
+        rpcSettings {
+            address("localhost:10009")
+            adminAddress("localhost:10049")
+        }
+        webPort 10036
+        cordapps = [
+                "$project.group:cordapp-contracts-states:$project.version",
+                "$project.group:cordapp:$project.version",
+                "$corda_release_group:corda-finance:$corda_release_version"
+        ]
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+    }
+
 }
 
 task runTemplateClient(type: JavaExec) {
