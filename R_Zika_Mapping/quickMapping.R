@@ -24,7 +24,7 @@ mapLocations <- function(location.df, output.name) {
   
 }
 
-wd <- "C:\\Users\\Anita\\Documents\\Fall_2018\\hackseq18\\"
+wd <- "/Users/immortalcha/"
 dataset <- "cdc_zika_geocoded.csv"
 dataset <- paste0(wd, dataset)
 location.data <- read.csv(file=dataset, stringsAsFactors = F)
