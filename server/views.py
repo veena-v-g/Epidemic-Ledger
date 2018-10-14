@@ -7,7 +7,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 
 import json
-from scripts.statistics import get_data
+from .scripts.statistics import get_data
 
 
 ###########
