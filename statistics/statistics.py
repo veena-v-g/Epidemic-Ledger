@@ -5,11 +5,17 @@ from numpy import percentile
 # from statistics import mean
 
 
-# def get_mean_and_stdv(numbers):
-  #   mu = mean(numbers)
-    #stdv = stdev(numbers)
-
-    #return [stdv, mu]
+def get_mean_and_stdv(numbers):
+     mu = 0;
+    for cases in numbers:
+        mu += cases
+    mu /= len(numbers)
+    stdv = 0;
+    for cases in numbers:
+        stdv += (cases - mu) ** 2
+    stdv /= len(numbers)
+    stdv = sqrt(stdv)
+    return [stdv, mu]
 
 def get_five_num_summ(numbers):
 
@@ -61,7 +67,6 @@ def get_world_summary():
                     countries.append(country)
 
         for country in countries:
-            # print(country)
             country_summary = get_statistics_country(country, 3)
             for case in country_summary:
                 if "confirmed" in case or "probable" in case:
