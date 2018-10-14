@@ -15,7 +15,9 @@ class LoginForm(FlaskForm):
         "class": "form-control"
     })
 
-    submit = SubmitField('Login')
+    submit = SubmitField('Login', render_kw={
+        "class": "btn btn-primary btn-lg btn-block"
+    })
 
 
 class RegistrationForm(FlaskForm):
@@ -39,7 +41,9 @@ class RegistrationForm(FlaskForm):
         "class": "form-control"
     })
 
-    submit = SubmitField("Register")
+    submit = SubmitField("Register", render_kw={
+        "class": "btn btn-primary btn-lg btn-block"
+    })
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
@@ -106,4 +110,6 @@ class AddRecordForm(FlaskForm):
         "class": "form-control"
     })
 
-    submit = SubmitField('Login')
+    submit = SubmitField('Add Record', render_kw={
+        "class": "btn btn-primary btn-lg btn-block"
+    })
