@@ -7,11 +7,13 @@ from flask_login import LoginManager
 app = Flask(__name__)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-sql_uri = "sqlite:///" + os.path.join(basedir, "server.db")
+sql_uri = 'sqlite:///' + os.path.join(basedir, 'server.db')
 
-app.config["SECRET_KEY"] = "CBgEgi0DNRnMQrwwYoFwa6MTwaEndIZQ"
-app.config["SQLALCHEMY_DATABASE_URI"] = sql_uri
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config.from_mapping(
+    SECRET_KEY="CBgEgi0DNRnMQrwwYoFwa6MTwaEndIZQ",
+    SQLALCHEMY_DATABASE_URI=sql_uri,
+    SQLALCHEMY_TRACK_MODIFICATIONS=False
+)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
