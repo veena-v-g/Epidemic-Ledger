@@ -17,16 +17,14 @@ mapLocations <- function(location.df, output.name) {
   mapped <- mapview(locations_zika)
   
   #write map
-  mapshot(mapped,file = paste0(output, ".png"), url = paste0(output, ".html"))
+  mapshot(mapped, url = paste0(output, ".html"))
   
   print("Your map is saved to: ")
   print(paste0(output,".html"))
   
 }
 
-wd <- "/Users/immortalcha/"
 dataset <- "cdc_zika_geocoded.csv"
-dataset <- paste0(wd, dataset)
 location.data <- read.csv(file=dataset, stringsAsFactors = F)
 
 #remove any locations which don't have lon and lat coordinates

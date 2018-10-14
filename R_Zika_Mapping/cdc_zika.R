@@ -28,8 +28,11 @@ grabCoor <- function(dataset) {
 }
 
 #format the locations
-dataset.df$location <- gsub( "-", ",", dataset.df$location)
 dataset.df$location <- gsub( "_", " ", dataset.df$location)
+dataset.df <- separate(dataset.df, location, into=c("Country", "Sublocation"), sep = "-", extra = "merge") 
+dataset.df <- unite(dataset.df, col = "location", Sublocation, Country, sep = ",")
+dataset.df$location <- gsub( "NA,", "", dataset.df$location,ignore.case = F)
+dataset.df$location <- gsub("-", ",", dataset.df$location)
 
 #subset the locations to retrieve only unique locations
 #ggmap is limited to 2500 queries per day
@@ -37,7 +40,6 @@ uniqueLocAnnotated <- data.frame(stringsAsFactors = F)
 uniqueLocAnnotated <- grabUniqueLocations(dataset.df$location)
 uniqueLocAnnotated <- as.data.frame(uniqueLocAnnotated, stringsAsFactors = F)
 colnames(uniqueLocAnnotated)[colnames(uniqueLocAnnotated) == "uniqueLocAnnotated"] <- "location" #rename the column
-
 
 #grab the lat and lon for each location
 location.df <- grabCoor(uniqueLocAnnotated)
@@ -48,13 +50,10 @@ write.xlsx(location.df, file = gsub(".csv", "_geocodedLocations.xlsx",dataset), 
 #merge the lat and lon onto the orignial dataset.df
 dataset.df.annotated <- merge.data.frame(dataset.df, location.df, by=c("location"), all.x=T)
 
-#return data format to orignal format
-dataset.df.annotated$location <- gsub( ",", "-", dataset.df.annotated$location)
-dataset.df.annotated$location <- gsub( " ", "_", dataset.df.annotated$location)
 dataset.df.annotated <- dataset.df.annotated[dataset.df.annotated$location != "",] #remove blank rows
 
 #write results to csv
-write.csv(dataset.df.annotated, file=gsub(".csv", "_geocoded.csv", dataset), row.names = F)
+write.table(dataset.df.annotated, file=gsub(".csv", "_geocoded.csv", dataset), row.names = F, sep = "\t")
 
 #print warnings
 warnings()
