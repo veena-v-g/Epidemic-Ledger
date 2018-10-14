@@ -1,5 +1,5 @@
 # install.packages("dplyr")
-# install.packages("ggmap")
+# devtools::install_github("dkahle/ggmap")
 # install.packages("tidyr")
 # install.packages("xlsx")
 
@@ -11,7 +11,7 @@ library(xlsx)
 #Input: one csv file (*InputFileName.csv*) with a column named location. Each location is formatted Country-City_Name-Additional_Specifications
 #Output: 
 #a. A xlsx file named *InputFileName_geocodedLocations.xlsx* containing unique locations from the input file and the associated longitude and latitude coordinates.
-#b. A csv file name *InputFileName_geocoded.csv* in which the original input data is annotated with longitude and latitude coordinates.
+#b. A tab file name *InputFileName_geocoded.tab* in which the original input data is annotated with longitude and latitude coordinates.
 ##All text surrounded by *stars* are generic naming conventions
 
 dataset <- "cdc_zika.csv"
@@ -53,7 +53,7 @@ dataset.df.annotated <- merge.data.frame(dataset.df, location.df, by=c("location
 dataset.df.annotated <- dataset.df.annotated[dataset.df.annotated$location != "",] #remove blank rows
 
 #write results to csv
-write.table(dataset.df.annotated, file=gsub(".csv", "_geocoded.csv", dataset), row.names = F, sep = "\t")
+write.table(dataset.df.annotated, file=gsub(".csv", "_geocoded.tab", dataset), row.names = F, sep = "\t", col.names = T)
 
 #print warnings
 warnings()
