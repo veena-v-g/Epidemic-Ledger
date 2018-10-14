@@ -1,12 +1,12 @@
 
 [91m   ______               __
   / ____/     _________/ /___ _
- / /     __  / ___/ __  / __ `/         [94mWhat you can buy for a dollar these
-[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mdays is absolute non-cents! 💰  
+ / /     __  / ___/ __  / __ `/         [94m"It's OK computer, I go to sleep after
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mtwenty minutes of inactivity too!"
 [91m\____/     /_/   \__,_/\__,_/[m
 
 [99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
 
 [m
-Logs can be found in                    : /Users/sg_home/Downloads/cordapp-template-java/build/nodes/PartyB/logs
-Database connection url is              : jdbc:h2:tcp://206.12.32.72:49183/node
+Logs can be found in                    : /Users/sg_home/Desktop/InfectiousBlockchain/cordapp-template-java/build/nodes/PartyB/logs
+Database connection url is              : jdbc:h2:tcp://172.30.49.191:53590/node

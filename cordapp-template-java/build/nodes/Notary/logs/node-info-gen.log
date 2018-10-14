@@ -8,5 +8,5 @@
 [99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
 
 [m
-Logs can be found in                    : /Users/sg_home/Downloads/cordapp-template-java/build/nodes/Notary/logs
-Database connection url is              : jdbc:h2:tcp://206.12.32.72:49180/node
+Logs can be found in                    : /Users/sg_home/Desktop/InfectiousBlockchain/cordapp-template-java/build/nodes/Notary/logs
+Database connection url is              : jdbc:h2:tcp://172.30.49.191:53586/node
