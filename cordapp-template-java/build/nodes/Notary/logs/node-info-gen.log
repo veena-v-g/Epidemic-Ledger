@@ -1,0 +1,12 @@
+
+[91m   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         [94mYou know, I was a banker
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94monce ... but I lost interest. 💰  
+[91m\____/     /_/   \__,_/\__,_/[m
+
+[99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
+
+[m
+Logs can be found in                    : /Users/sg_home/Downloads/cordapp-template-java/build/nodes/Notary/logs
+Database connection url is              : jdbc:h2:tcp://206.12.32.72:49180/node

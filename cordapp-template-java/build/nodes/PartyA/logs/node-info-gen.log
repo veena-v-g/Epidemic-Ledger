@@ -1,0 +1,12 @@
+
+[91m   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         [94mIt runs on the JVM because QuickBasic
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mis apparently not 'professional' enough.
+[91m\____/     /_/   \__,_/\__,_/[m
+
+[99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
+
+[m
+Logs can be found in                    : /Users/sg_home/Downloads/cordapp-template-java/build/nodes/PartyA/logs
+Database connection url is              : jdbc:h2:tcp://206.12.32.72:49182/node
