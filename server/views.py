@@ -25,6 +25,16 @@ def about():
     return render_template("about.html")
 
 
+@app.route("/map")
+def map():
+    return render_template("map.html")
+
+
+@app.route("/stats")
+def stats():
+    return render_template("stats.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if current_user.is_authenticated:
@@ -108,8 +118,8 @@ def records():
     return render_template("records.html", form=form)
 
 
-@app.route("/stats")
-def stats():
+@app.route("/quartiles")
+def quartiles():
     return get_data()
 
 

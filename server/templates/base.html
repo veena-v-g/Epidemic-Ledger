@@ -36,6 +36,8 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <div class="navbar-nav nav-fill w-100">
                 <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+                <a class="nav-item nav-link" href="{{ url_for('map') }}">Map</a>
+                <a class="nav-item nav-link" href="{{ url_for('stats') }}">Statistics</a>
                 <a class="nav-item nav-link" href="{{ url_for('admin') }}">Admin</a>
                 {% if current_user.is_authenticated %}
                 <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
