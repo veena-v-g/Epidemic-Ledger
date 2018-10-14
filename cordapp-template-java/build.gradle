@@ -152,6 +152,7 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         ]
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
     }
+    println "File written to InfectiousBlockchain/Datasets/Mosquito/Zika/cdc_zika"
 }
 
 task runTemplateClient(type: JavaExec) {
