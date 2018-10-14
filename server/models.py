@@ -31,6 +31,20 @@ class Region(db.Model):
     name = db.Column(db.String(140))
 
 
+class Records(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    location = db.Column(db.String(140))
+    date = db.Column(db.String(140))
+    location_type = db.Column(db.String(140))
+    data_field = db.Column(db.String(140))
+    data_field_code = db.Column(db.String(140))
+    time_period = db.Column(db.String(140))
+    time_period_type = db.Column(db.String(140))
+    value = db.Column(db.String(140))
+    unit = db.Column(db.String(140))
+    geometry = db.Column(db.String(140))
+
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))

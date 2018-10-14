@@ -16,9 +16,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 
     <title>
-        {% if page_title is defined %}
-        {{ page_title }} |
-        {% endif %}
+        {% block title %}{% endblock %}
+        {% if self.title() %} | {% endif %}
         Team 7: Infectious Blockchain | hackseq18
     </title>
 </head>
@@ -37,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <div class="navbar-nav nav-fill w-100">
                 <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
-                <a class="nav-item nav-link" href="{{ url_for('doctors') }}">Doctor's Tools</a>
+                <a class="nav-item nav-link" href="{{ url_for('admin') }}">Admin</a>
                 {% if current_user.is_authenticated %}
                 <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
                 {% else %}
@@ -51,7 +50,7 @@
     <main class="container-fluid p-5">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-        <div class="message-list">
+        <div class="message-list container col-12 col-sm-8 col-md-6 col-lg-4">
             {% for message in messages %}
             <div class="alert alert-info">{{ message }}</div>
             {% endfor %}

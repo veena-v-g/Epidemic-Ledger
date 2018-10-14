@@ -2,9 +2,12 @@ from flask import render_template, flash, request, redirect, url_for, send_from_
 from server import app
 from server import db
 from server.models import User
-from server.forms import LoginForm, RegistrationForm
+from server.forms import LoginForm, RegistrationForm, AddRecordForm
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
+
+import json
+from scripts.statistics import get_data
 
 
 ###########
@@ -27,7 +30,7 @@ def register():
     if current_user.is_authenticated:
         flash("You're already logged in.")
 
-        return redirect(url_for("doctors"))
+        return redirect(url_for("admin"))
 
     form = RegistrationForm()
 
@@ -50,7 +53,7 @@ def login():
     if current_user.is_authenticated:
         flash("You're already logged in.")
 
-        return redirect(url_for("doctors"))
+        return redirect(url_for("admin"))
 
     form = LoginForm()
 
@@ -66,7 +69,7 @@ def login():
         next_page = request.args.get("next")
 
         if not next_page or url_parse(next_page).netloc != "":
-            next_page = url_for("doctors")
+            next_page = url_for("admin")
 
         return redirect(next_page)
 
@@ -81,10 +84,34 @@ def logout():
     return redirect(url_for("index"))
 
 
-@app.route("/doctors")
+@app.route("/admin")
 @login_required
-def doctors():
-    return render_template("doctors.html")
+def admin():
+    return render_template("admin.html")
+
+
+# TODO: Implement proper actions
+@app.route("/records", methods=["GET", "POST"])
+def records():
+    if not current_user.is_authenticated:
+        flash("You need to be logged in to access this feature.")
+
+        return redirect(url_for("login"))
+
+    form = AddRecordForm()
+
+    if form.validate_on_submit():
+        flash("Record added!")
+
+        return redirect(url_for("records"))
+
+    return render_template("records.html", form=form)
+
+
+@app.route("/stats")
+def stats():
+    return get_data()
+
 
 ##################
 ## STATIC FILES ##

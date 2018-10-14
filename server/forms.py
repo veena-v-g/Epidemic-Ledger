@@ -5,17 +5,40 @@ from server.models import User
 
 
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Sign In')
+    username = StringField('Username', [DataRequired()], render_kw={
+        "placeholder": "Username",
+        "class": "form-control"
+    })
+
+    password = PasswordField('Password', [DataRequired()], render_kw={
+        "placeholder": "Password",
+        "class": "form-control"
+    })
+
+    submit = SubmitField('Login')
 
 
 class RegistrationForm(FlaskForm):
-    username = StringField("Username", validators=[DataRequired()])
-    email = StringField("Email", validators=[DataRequired(), Email()])
-    password = PasswordField("Password", validators=[DataRequired()])
-    password_check = PasswordField("Repeat Password", validators=[
-                                   DataRequired(), EqualTo("password")])
+    username = StringField("Username", [DataRequired()], render_kw={
+        "placeholder": "Enter a username",
+        "class": "form-control"
+    })
+
+    email = StringField("Email", [DataRequired(), Email()], render_kw={
+        "placeholder": "Enter your email",
+        "class": "form-control"
+    })
+
+    password = PasswordField("Password", [DataRequired()], render_kw={
+        "placeholder": "Enter a password",
+        "class": "form-control"
+    })
+
+    password_check = PasswordField("Verify Password", [DataRequired(), EqualTo("password")], render_kw={
+        "placeholder": "Please re-enter your password",
+        "class": "form-control"
+    })
+
     submit = SubmitField("Register")
 
     def validate_username(self, username):
@@ -29,3 +52,58 @@ class RegistrationForm(FlaskForm):
 
         if email is not None:
             raise ValidationError("Email address taken")
+
+
+# TODO: Finish this
+class AddRecordForm(FlaskForm):
+    location = StringField("Location", [DataRequired()], render_kw={
+        "placeholder": "Enter the location of the report",
+        "class": "form-control"
+    })
+
+    date = StringField('Report Date', [DataRequired()], render_kw={
+        "placeholder": "Enter the date of the report",
+        "class": "form-control"
+    })
+
+    location_type = StringField('Location Type', [DataRequired()], render_kw={
+        "placeholder": "What type of location data is it?",
+        "class": "form-control"
+    })
+
+    data_field = StringField('Data Field', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    data_field_code = StringField('Data Field Code', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    time_period = StringField('Time Period', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    time_period_type = StringField('Time Period Type', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    value = StringField('Value', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    unit = StringField('Unit', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    geometry = StringField('Geometry', [DataRequired()], render_kw={
+        "placeholder": "",
+        "class": "form-control"
+    })
+
+    submit = SubmitField('Login')

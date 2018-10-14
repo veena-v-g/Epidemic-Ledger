@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Record Infection{% endblock %}
+{% block content %}
+<!-- TODO: Create actual form -->
+<form action="{{ url_for('records') }}" method="POST" class="container col-12 col-sm-8 col-md-6 col-lg-4">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.location.label }}
+        {{ form.location(size=32) }}<br>
+        {% for error in form.location.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.date.label }}
+        {{ form.date(size=32) }}<br>
+        {% for error in form.date.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.location_type.label }}
+        {{ form.location_type(size=32) }}<br>
+        {% for error in form.location_type.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.data_field.label }}
+        {{ form.data_field(size=32) }}<br>
+        {% for error in form.data_field.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.data_field_code.label }}
+        {{ form.data_field_code(size=32) }}<br>
+        {% for error in form.data_field_code.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.time_period.label }}
+        {{ form.time_period(size=32) }}<br>
+        {% for error in form.time_period.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.time_period_type.label }}
+        {{ form.time_period_type(size=32) }}<br>
+        {% for error in form.time_period_type.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.value.label }}
+        {{ form.value(size=32) }}<br>
+        {% for error in form.value.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.unit.label }}
+        {{ form.unit(size=32) }}<br>
+        {% for error in form.unit.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.geometry.label }}
+        {{ form.geometry(size=32) }}<br>
+        {% for error in form.geometry.errors %}
+        <small class="form-text text-muted">[{{ error }}]</small>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">{{ form.submit() }}</p>
+</form>
+{% endblock %}
