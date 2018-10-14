@@ -1,0 +1,48 @@
+body {
+  background-color: lightgray;
+  max-width: 100vw;
+}
+
+form input {
+  width: 200px;
+}
+
+img {
+  border-radius: 25px;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 95vw;
+  height: 95vh;
+  margin: 20px auto;
+}
+
+.gmap_canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: none;
+}
+
+.hackseq {
+  padding: 10px;
+  background-color: #666666;
+  border-radius: 5px;
+}
+
+.poster {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
