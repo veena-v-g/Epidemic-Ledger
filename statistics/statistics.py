@@ -1,19 +1,17 @@
 import numpy as np
 import csv
 from numpy import percentile
-from numpy import array
-import statistics
+# from statistics import stdev
+# from statistics import mean
 
-def get_mean_and_stdv(numbers):
 
-    stdev = statistics.stdev(numbers)
-    mean = statistics.mean(numbers)
+# def get_mean_and_stdv(numbers):
+  #   mu = mean(numbers)
+    #stdv = stdev(numbers)
 
-    return [stdev, mean]
+    #return [stdv, mu]
 
 def get_five_num_summ(numbers):
-
-
 
     list.sort(numbers)
 
@@ -75,10 +73,11 @@ def get_world_summary():
 
 
 summary = get_world_summary()
-numbers = summary.values()
+numbers = list(summary.values())
 
 for index in range(len(numbers)):
     numbers[index] = int(numbers[index].replace("\"", ""))
     print(type(numbers[index]))
 
-print(str(get_five_num_summ(list(numbers))))
+print(str(get_five_num_summ(numbers)))
+print(str(get_mean_and_stdv(numbers)))
