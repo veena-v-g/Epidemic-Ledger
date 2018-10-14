@@ -8,7 +8,33 @@ form input {
 }
 
 img {
-  border-radius: 25px;
+  border-radius: 5px;
+}
+
+.jumbotron-wrapper {
+  background-image: url("/assets/map.png");
+  background-size: cover;
+  height: 400px;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+.jumbotron h1 {
+  color: white;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+.map {
+  width: 100%;
+  border: 1px solid #bbb;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 iframe {

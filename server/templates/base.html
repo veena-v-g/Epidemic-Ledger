@@ -49,6 +49,8 @@
 
     </nav>
 
+    {% block header %}{% endblock %}
+
     <main class="container-fluid p-5">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
