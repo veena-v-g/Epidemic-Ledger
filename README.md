@@ -25,13 +25,12 @@ Applying blockchain methodologies for tracking infectious diseases. It accepts
   * numpy 1.15
   * virtualenv
 * R
-  * SF
-  * MapView
-  * DPLYR
-  * ggmap
-  * XLXS
-  * TidyR
-  * DKAHLE/ggmap
+  * sf
+  * mapview
+  * dplyr
+  * xlsx
+  * tidyr
+  * dkahle/ggmap
   
 
 ## Installation
