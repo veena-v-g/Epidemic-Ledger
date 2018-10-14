@@ -1,5 +1,7 @@
 # Abstract
 
+Word count: 275
+
 Blockchain is a type of data structure that involves a chain of blocks that is cryptographically protected with a hash function.  The data within the blocks cannot be altered without all of the blocks being changed leading to an unique transactions.  Blockchain promises anonymity, security, and correctness of the data being stored within these blocks.  
 
 Infectious diseases are caused by pathogenic microorganisms. 
