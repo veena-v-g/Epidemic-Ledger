@@ -1,12 +1,12 @@
 
 [91m   ______               __
   / ____/     _________/ /___ _
- / /     __  / ___/ __  / __ `/         [94m"It's OK computer, I go to sleep after
-[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mtwenty minutes of inactivity too!"
+ / /     __  / ___/ __  / __ `/         [94mComputers are useless. They can only
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mgive you answers.  -- Picasso
 [91m\____/     /_/   \__,_/\__,_/[m
 
 [99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
 
 [m
 Logs can be found in                    : /Users/sg_home/Desktop/InfectiousBlockchain/cordapp-template-java/build/nodes/PartyB/logs
-Database connection url is              : jdbc:h2:tcp://172.30.49.191:53590/node
+Database connection url is              : jdbc:h2:tcp://206.12.36.72:56264/node
