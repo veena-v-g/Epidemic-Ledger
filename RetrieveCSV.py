@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import csv
 
 path = "Datasets/Mosquito/Zika/cdc_zika.csv"
@@ -10,15 +11,15 @@ with open(path) as csvFile:
     caseType = {}
     region = {}
     date = {}
-    
+
     for row in reader:
         dataField = row[3]
         cases = row[7]
         location = row[1]  # .split("-", 1)[0]
         time = row[0]
 
-        if lines == 0:
-            print(f"Column names are {', '.join}")
+        if "report_date" in row:
+            print("Column names are",','.join(row))
         elif dataField == "zika_confirmed_clinic":
             if cases != "NA" and int(cases) > 0:
                 # print(f"Incident: {cases} confirmed case(s) in the {row[2]} of {location} on {time}")
