@@ -5,7 +5,7 @@ TODO:
     - What it gives
 -->
 
-# InfectiousBlockchain
+# Epidemic-Ledger
 
 Applying blockchain methodologies for tracking infectious diseases.  The project at the moment places the data into the blockchain from the CSV, takes the data from the CSV and places the information into a R framework that maps the data to the map.  The two parts of the pipeline needs to be connected and launched from a AWS server.  
 
