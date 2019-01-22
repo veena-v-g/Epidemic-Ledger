@@ -1,0 +1,12 @@
+
+[91m   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         [94mThere are two rules for financial success:
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94m1) Don't tell everything you know.
+[91m\____/     /_/   \__,_/\__,_/[m
+
+[99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
+
+[m
+Logs can be found in                    : /Users/sg_home/Desktop/InfectiousBlockchain/cordapp-template-java/build/nodes/TestNode/logs
+Database connection url is              : jdbc:h2:tcp://10.0.0.3:50314/node
