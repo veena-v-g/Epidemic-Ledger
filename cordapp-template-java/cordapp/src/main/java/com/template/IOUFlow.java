@@ -21,6 +21,8 @@ import java.util.List;
 public class IOUFlow extends FlowLogic<Void> {
     private final Integer iouValue;
     private final Party otherParty;
+  //  private final String diagnosis;
+    //private final String treatment;
 
     /**
      * The progress tracker provides checkpoints indicating the progress of the flow to observers.
@@ -30,6 +32,8 @@ public class IOUFlow extends FlowLogic<Void> {
     public IOUFlow(Integer iouValue, Party otherParty) {
         this.iouValue = iouValue;
         this.otherParty = otherParty;
+        //this.diagnosis = diagnosis;
+        //this.treatment = treatment;
     }
 
     @Override
@@ -51,7 +55,8 @@ public class IOUFlow extends FlowLogic<Void> {
         txBuilder.setNotary(notary);
 
         // We create the transaction components.
-        IOUState outputState = new IOUState(iouValue, getOurIdentity(), otherParty);
+        //IOUState(int patientId, Party doctor, Party patient, String diagnosis, String treatment)
+        IOUState outputState = new IOUState(iouValue, getOurIdentity(), otherParty, " ", " ");
         StateAndContract outputContractAndState = new StateAndContract(outputState, IOUContract.IOU_CONTRACT_ID);
         List<PublicKey> requiredSigners = ImmutableList.of(getOurIdentity().getOwningKey(), otherParty.getOwningKey());
         Command cmd = new Command<>(new IOUContract.Create(), requiredSigners);

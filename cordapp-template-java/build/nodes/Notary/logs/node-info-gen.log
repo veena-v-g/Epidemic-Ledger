@@ -1,12 +1,12 @@
 
 [91m   ______               __
   / ____/     _________/ /___ _
- / /     __  / ___/ __  / __ `/         [94mTop tip: never say "oops", instead
-[91m/ /___  /_/ / /  / /_/ / /_/ /          [94malways say "Ah, Interesting!"
+ / /     __  / ___/ __  / __ `/         [94mI met my bank manager yesterday and asked
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mto check my balance ... he pushed me over!
 [91m\____/     /_/   \__,_/\__,_/[m
 
 [99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
 
 [m
 Logs can be found in                    : /Users/sg_home/Desktop/InfectiousBlockchain/cordapp-template-java/build/nodes/Notary/logs
-Database connection url is              : jdbc:h2:tcp://206.12.36.72:56263/node
+Database connection url is              : jdbc:h2:tcp://10.0.0.7:57101/node

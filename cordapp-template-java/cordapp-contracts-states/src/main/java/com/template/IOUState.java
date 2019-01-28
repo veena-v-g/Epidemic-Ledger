@@ -11,30 +11,34 @@ import java.util.List;
  * Define your state object here.
  */
 public class IOUState implements ContractState {
-    private final int value;
-    private final Party lender;
-    private final Party borrower;
+    private final Party patient;
+    private final int patientId;
+    private final String diagnosis;
+    private final String treatment;
+    private final Party doctor;
 
-    public IOUState(int value, Party lender, Party borrower) {
-        this.value = value;
-        this.lender = lender;
-        this.borrower = borrower;
+    public IOUState(int patientId, Party doctor, Party patient, String diagnosis, String treatment) {
+      this.patient = patient;
+      this.patientId = patientId;
+      this.diagnosis = diagnosis;
+      this.treatment = treatment;
+      this.doctor = doctor;
     }
 
-    public int getValue() {
-        return value;
+    public int getPatientId() {
+        return patientId;
     }
 
-    public Party getLender() {
-        return lender;
+    public Party getPatient() {
+        return patient;
     }
 
-    public Party getBorrower() {
-        return borrower;
+    public Party getDoctor() {
+        return doctor;
     }
 
     @Override
     public List<AbstractParty> getParticipants() {
-        return ImmutableList.of(lender, borrower);
+        return ImmutableList.of(patient, doctor);
     }
 }

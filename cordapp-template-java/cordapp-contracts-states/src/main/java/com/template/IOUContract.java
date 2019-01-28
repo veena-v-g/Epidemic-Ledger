@@ -13,6 +13,8 @@ import java.util.List;
 import static net.corda.core.contracts.ContractsDSL.requireSingleCommand;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 
+import net.corda.client.jackson.JacksonSupport;
+
 /**
  * Define your contract here.
  */
@@ -34,16 +36,16 @@ public class IOUContract implements Contract {
 
             // IOU-specific constraints.
             final IOUState out = tx.outputsOfType(IOUState.class).get(0);
-            final Party lender = out.getLender();
-            final Party borrower = out.getBorrower();
-            check.using("The IOU's value must be non-negative.", out.getValue() > 0);
-            check.using("The lender and the borrower cannot be the same entity.", lender != borrower);
+            final Party patient = out.getPatient();
+            final Party doctor = out.getDoctor();
+            check.using("The IOU's value must be non-negative.", out.getPatientId() > 0);
+            check.using("The lender and the borrower cannot be the same entity.", patient != doctor);
 
             // Constraints on the signers.
             final List<PublicKey> signers = command.getSigners();
             check.using("There must be two signers.", signers.size() == 2);
             check.using("The borrower and lender must be signers.", signers.containsAll(
-                    ImmutableList.of(borrower.getOwningKey(), lender.getOwningKey())));
+                    ImmutableList.of(doctor.getOwningKey(), patient.getOwningKey())));
 
             return null;
         });
