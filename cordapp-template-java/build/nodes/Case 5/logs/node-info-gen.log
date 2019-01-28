@@ -1,0 +1,12 @@
+
+[91m   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         [94mI won $3M on the lottery so I donated a quarter
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mof it to charity. Now I have $2,999,999.75.
+[91m\____/     /_/   \__,_/\__,_/[m
+
+[99;1m--- Corda Open Source 3.2-corda (5ae8325) -----------------------------------------------
+
+[m
+Logs can be found in                    : /Users/sg_home/Desktop/InfectiousBlockchain/cordapp-template-java/build/nodes/Case 5/logs
+Database connection url is              : jdbc:h2:tcp://10.0.0.7:57108/node
