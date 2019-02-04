@@ -14,13 +14,13 @@ Applying blockchain methodologies for tracking infectious diseases.  The project
 ### Language
 
 * Python 3.6
-* Java 1.8
+* Kotlin 1.3.20
 * R
 
 ### Libraries
 
-* Java
-  * Corda 3.2
+* Kotlin
+  * Corda 3.3
 * Python
   * numpy 1.15
   * virtualenv
@@ -36,7 +36,7 @@ Applying blockchain methodologies for tracking infectious diseases.  The project
 ## Installation
 
 1. Open a terminal
-1. Type `git clone https://github.com/vghorakavi/InfectiousBlockchain`
+1. Type `git clone https://github.com/vghorakavi/Epidemic-Ledger`
 
 ## Input
 
