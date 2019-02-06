@@ -7,6 +7,8 @@ import net.corda.core.identity.AbstractParty
 import net.corda.core.identity.Party
 import net.corda.core.transactions.LedgerTransaction
 import net.corda.core.contracts.*
+import net.corda.core.transactions.*
+import net.corda.core.transactions.BaseTransaction.outputsofType
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState
 import net.corda.core.schemas.QueryableState
@@ -39,6 +41,8 @@ class DiagnosisContract : Contract {
         val command = tx.commands.requireSingleCommand<Commands>()
         requireThat{
         "No diagnosis should be consumed when sending a message".using (tx.inputs.isEmpty())
+        "Only one diagnosis should be created per patient".using (tx.outputs.size == 1)
+        val out = tx.outputsofType<PatientState>().single()
         }
     }
 }
