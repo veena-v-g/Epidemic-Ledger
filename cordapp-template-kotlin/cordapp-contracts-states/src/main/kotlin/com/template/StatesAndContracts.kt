@@ -8,7 +8,7 @@ import net.corda.core.identity.Party
 import net.corda.core.transactions.LedgerTransaction
 import net.corda.core.contracts.*
 import net.corda.core.transactions.*
-import net.corda.core.transactions.BaseTransaction.outputsofType
+import net.corda.core.transactions.BaseTransaction.*
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState
 import net.corda.core.schemas.QueryableState
@@ -16,6 +16,17 @@ import net.corda.core.serialization.CordaSerializable
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Table
+
+// *********
+// * State *
+// *********
+data class PatientState(val patientName: String,
+                        val doctorName: Party,
+                        val hospitalName: Party,
+                        val insuranceName: Party,
+                        val data: String) : ContractState {
+    override val participants: List<Party>get() = listOf(doctorName, hospitalName)
+}
 
 // ************
 // * Contract *
@@ -42,18 +53,7 @@ class DiagnosisContract : Contract {
         requireThat{
         "No diagnosis should be consumed when sending a message".using (tx.inputs.isEmpty())
         "Only one diagnosis should be created per patient".using (tx.outputs.size == 1)
-        val out = tx.outputsofType<PatientState>().single()
+        val out = tx.outputsOfType<PatientState>().single()
         }
     }
-}
-
-// *********
-// * State *
-// *********
-data class PatientState(val patientName: String,
-                        val doctorName: Party,
-                        val hospitalName: Party,
-                        val insuranceName: Party,
-                        val data: String) : ContractState {
-    override val participants: List<Party>get() = listOf(doctorName, hospitalName)
 }
