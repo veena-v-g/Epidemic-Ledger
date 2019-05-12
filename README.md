@@ -58,3 +58,4 @@ Applying blockchain methodologies for tracking infectious diseases.  The project
 ### Introduction/Use Case
 
 https://medium.com/@vghorakavi/using-blockchain-to-track-infectious-diseases-ad29b2a20b64 --> This is defunct. 
+Live @ epidemicledger.info on May 12 2019
